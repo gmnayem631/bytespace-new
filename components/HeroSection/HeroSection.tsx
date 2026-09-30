@@ -32,7 +32,7 @@ export const HeroSection: React.FC = () => {
         alt=""
         aria-hidden
         priority
-        className="pointer-events-none absolute left-0 top-0 h-auto w-full select-none"
+        className="pointer-events-none absolute left-0 top-44 h-auto w-full select-none"
       />
 
       {/* Copy + search */}
