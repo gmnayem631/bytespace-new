@@ -1,6 +1,5 @@
 import type { ComponentType, SVGProps } from "react";
 
-// Adjust these names/paths to match the files in /components/logos
 import Logoipsum1 from "@/components/logos/Logoipsum1";
 import Logoipsum2 from "@/components/logos/Logoipsum2";
 import Logoipsum3 from "@/components/logos/Logoipsum3";

@@ -3,7 +3,7 @@ import Image from "next/image";
 type Course = {
   title: string;
   author: string;
-  image: string; // path in /public, e.g. "/images/courses/figma.png"
+  image: string;
   rating: number;
   level: string;
   price: number;

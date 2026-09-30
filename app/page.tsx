@@ -1,4 +1,5 @@
 import CategorySection from "@/components/CategorySection/CategorySection";
+import CourseCategories from "@/components/CourseCategories/CourseCategories";
 import CourseSection from "@/components/CourseSection/CourseSection";
 import { HeroSection } from "@/components/HeroSection/HeroSection";
 import LogoStrip from "@/components/LogoStrip/LogoStrip";
@@ -12,6 +13,7 @@ export default function Home() {
       <LogoStrip />
       <CategorySection />
       <CourseSection />
+      <CourseCategories />
     </div>
   );
 }
