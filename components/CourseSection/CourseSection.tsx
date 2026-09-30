@@ -3,7 +3,7 @@ import Image from "next/image";
 type Course = {
   title: string;
   author: string;
-  image: string; // path in /public, e.g. "/images/courses/figma.jpg"
+  image: string; // path in /public, e.g. "/images/courses/figma.png"
   rating: number;
   level: string;
   price: number;
@@ -13,17 +13,17 @@ type Course = {
 };
 
 const COURSES: Course[] = [
-  { title: "Learn Figma from Basic", image: "/images/courses/figma.jpg" },
-  { title: "Build Digital Asset", image: "/images/courses/assets.jpg" },
-  { title: "the Power of Big Data", image: "/images/courses/big-data.jpg" },
+  { title: "Learn Figma from Basic", image: "/images/courses/figma.png" },
+  { title: "Build Digital Asset", image: "/images/courses/assets.png" },
+  { title: "the Power of Big Data", image: "/images/courses/big-data.png" },
   {
     title: "Balancing Productivity and Life",
-    image: "/images/courses/productivity.jpg",
+    image: "/images/courses/productivity.png",
   },
-  { title: "Mastering Money Management", image: "/images/courses/money.jpg" },
+  { title: "Mastering Money Management", image: "/images/courses/money.png" },
   {
     title: "From Idea to Startup Success",
-    image: "/images/courses/startup.jpg",
+    image: "/images/courses/startup.png",
   },
 ].map((c) => ({
   ...c,
@@ -45,7 +45,7 @@ const AVATAR_COLORS = [
 ];
 
 const Pill = ({ children }: { children: React.ReactNode }) => (
-  <span className="whitespace-nowrap rounded-full bg-white/50 px-2 py-[3px] text-[9px] text-[#6B6D73] backdrop-blur-sm">
+  <span className="whitespace-nowrap rounded-full bg-white/50 px-2 py-1 text-[9px] text-[#6B6D73] backdrop-blur-sm">
     {children}
   </span>
 );
@@ -53,7 +53,7 @@ const Pill = ({ children }: { children: React.ReactNode }) => (
 const CourseCard: React.FC<{ course: Course }> = ({ course }) => (
   <article className="rounded-2xl border border-[#E4E4E7] bg-white p-2">
     {/* Thumbnail */}
-    <div className="relative aspect-[200/114] w-full overflow-hidden rounded-lg">
+    <div className="relative aspect-200/114 w-full overflow-hidden rounded-lg">
       <Image
         src={course.image}
         alt={course.title}
@@ -111,7 +111,7 @@ const CourseCard: React.FC<{ course: Course }> = ({ course }) => (
           {AVATAR_COLORS.map((color, i) => (
             <span
               key={i}
-              className={`-ml-1.5 h-[22px] w-[22px] rounded-full border-2 border-white first:ml-0 ${color}`}
+              className={`-ml-1.5 h-5.5 w-5.5 rounded-full border-2 border-white first:ml-0 ${color}`}
             />
           ))}
           <span className="-ml-1.5 flex h-6 w-6 items-center justify-center rounded-full bg-[#D4FB20] text-[8px] font-bold text-[#242528]">
@@ -133,7 +133,7 @@ const CourseCard: React.FC<{ course: Course }> = ({ course }) => (
 
 export const CourseSection: React.FC = () => (
   <section className="bg-white px-6 pb-16">
-    <div className="mx-auto grid max-w-[1000px] gap-x-6 gap-y-6 sm:grid-cols-2 lg:grid-cols-3">
+    <div className="mx-auto grid max-w-250 gap-x-6 gap-y-6 sm:grid-cols-2 lg:grid-cols-3">
       {COURSES.map((course) => (
         <CourseCard key={course.title} course={course} />
       ))}
