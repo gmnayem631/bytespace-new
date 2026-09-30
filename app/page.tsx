@@ -1,13 +1,13 @@
 import { HeroSection } from "@/components/HeroSection/HeroSection";
+import LogoStrip from "@/components/LogoStrip/LogoStrip";
 import { Navbar } from "@/components/Navbar/Navbar";
 
 export default function Home() {
   return (
     <div className="">
-      {/* <ByteSpaceLogo />
-      ByteSpace */}
       <Navbar />
       <HeroSection />
+      <LogoStrip />
     </div>
   );
 }
