@@ -17,6 +17,8 @@ import {
   FileText,
 } from "lucide-react";
 import type { CourseDetail } from "@/data/course-details";
+import { CourseReviewsTab } from "../CourseTabs/CourseReviewsTab";
+import { CourseLessonsTab } from "../CourseTabs/CourseLessonsTab";
 
 const tabs = ["About", "Lessons", "Reviews"] as const;
 
@@ -180,7 +182,7 @@ export function CourseDetails({ course }: { course: CourseDetail }) {
                 </div>
                 <div>
                   <p className="text-sm font-semibold text-neutral-900">
-                    PurePearl Studio
+                    {course.author}
                   </p>
                   <p className="text-xs text-neutral-400">
                     {course.authorRole}
@@ -226,7 +228,7 @@ export function CourseDetails({ course }: { course: CourseDetail }) {
           </div>
 
           {tab === "About" && (
-            <div className="mt-4">
+            <div className="mt-8">
               <h2 className="text-lg font-semibold text-neutral-900">
                 Description
               </h2>
@@ -243,7 +245,7 @@ export function CourseDetails({ course }: { course: CourseDetail }) {
                 {course.sneakPeaks.map((src, index) => (
                   <li
                     key={src}
-                    className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-neutral-100"
+                    className="relative aspect-4/3 overflow-hidden rounded-2xl bg-neutral-100"
                   >
                     <Image
                       src={src}
@@ -273,32 +275,9 @@ export function CourseDetails({ course }: { course: CourseDetail }) {
             </div>
           )}
 
-          {tab === "Lessons" && (
-            <div className="mt-8 space-y-3">
-              {course.lessons.map((lesson) => (
-                <div
-                  key={lesson.id}
-                  className="flex items-center justify-between rounded-2xl border border-neutral-100 px-4 py-3 text-sm"
-                >
-                  <span className="text-neutral-700">
-                    <span className="mr-2 text-neutral-400">{lesson.id}</span>
-                    {lesson.title}
-                  </span>
-                  <span className="text-[#3b6ce9]">{lesson.duration}</span>
-                </div>
-              ))}
-              <p className="text-sm text-neutral-400">
-                {course.moreVideos} more videos available after enrollment
-              </p>
-            </div>
-          )}
+          {tab === "Lessons" && <CourseLessonsTab course={course} />}
 
-          {tab === "Reviews" && (
-            <div className="mt-8 rounded-2xl border border-neutral-100 px-5 py-8 text-sm text-neutral-500">
-              {course.rating.toFixed(1)} average from {course.reviewCount}{" "}
-              reviews. Hook up your reviews API or list here.
-            </div>
-          )}
+          {tab === "Reviews" && <CourseReviewsTab course={course} />}
         </div>
       </section>
     </div>
