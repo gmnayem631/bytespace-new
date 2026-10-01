@@ -7,6 +7,7 @@ import LogoStrip from "@/components/LogoStrip/LogoStrip";
 import { Navbar } from "@/components/Navbar/Navbar";
 import GrowthSection from "@/components/sections/growth/GrowthSection";
 import { TestimonialsSection } from "@/components/TestimonialSection/testimonials-section";
+import { Footer } from "@/components/Footer/Footer";
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
       <GrowthSection />
       <CreatorHero />
       <TestimonialsSection />
+      <Footer />
     </div>
   );
 }
