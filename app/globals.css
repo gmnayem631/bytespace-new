@@ -24,3 +24,15 @@ body {
   color: var(--foreground);
   font-family: var(--next-satoshi), ui-sans-serif, system-ui, sans-serif;
 }
+
+.testimonials-canvas {
+  background-color: #fbfbfd;
+  background-image:
+    radial-gradient(
+      ellipse 85% 75% at 100% 0%,
+      #e4f59c 0%,
+      #eef8c0 34%,
+      transparent 64%
+    ),
+    radial-gradient(ellipse 60% 55% at 0% 100%, #d2dcf8 0%, transparent 62%);
+}
