@@ -1,39 +1,55 @@
+"use client";
+
 import React from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import ByteSpaceLogo from "../logos/ByteSpaceLogo";
 
 const NAV_LINKS = [
-  { label: "Home", href: "/", active: true },
+  { label: "Home", href: "/" },
   { label: "Courses", href: "/courses" },
   { label: "Creators", href: "/creators" },
-];
+] as const;
 
 export const Navbar: React.FC = () => {
+  const pathname = usePathname();
+
+  const isActive = (href: string) => {
+    if (href === "/") return pathname === "/";
+    return pathname === href || pathname.startsWith(`${href}/`);
+  };
+
   return (
     <header className="w-full bg-[#003BE2]">
       <nav className="relative z-20 mx-auto flex max-w-7xl items-center justify-between px-6 pt-8 text-sm text-white lg:px-10">
-        <div className="flex justify-center items-center gap-1">
+        <div className="flex items-center justify-center gap-1">
           <Link href="/" aria-label="ByteSpace home">
             <ByteSpaceLogo />
           </Link>
-          <span className="font-extrabold text-2xl text-[#F5F5F6]">
+          <span className="text-2xl font-extrabold text-[#F5F5F6]">
             ByteSpace
           </span>
         </div>
 
         <ul className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-6 md:flex">
-          {NAV_LINKS.map(({ label, href, active }) => (
-            <li key={label}>
-              <Link
-                href={href}
-                className={
-                  active ? "text-white" : "text-white/80 hover:text-white"
-                }
-              >
-                {label}
-              </Link>
-            </li>
-          ))}
+          {NAV_LINKS.map(({ label, href }) => {
+            const active = isActive(href);
+            return (
+              <li key={label}>
+                <Link
+                  href={href}
+                  className={
+                    active
+                      ? "font-medium text-white"
+                      : "text-white/80 hover:text-white"
+                  }
+                  aria-current={active ? "page" : undefined}
+                >
+                  {label}
+                </Link>
+              </li>
+            );
+          })}
         </ul>
 
         <div className="flex items-center gap-5 text-white/80">
