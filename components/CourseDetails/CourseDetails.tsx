@@ -243,7 +243,7 @@ export function CourseDetails({ course }: { course: CourseDetail }) {
                 {course.sneakPeaks.map((src, index) => (
                   <li
                     key={src}
-                    className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-neutral-100"
+                    className="relative aspect-4/3 overflow-hidden rounded-2xl bg-neutral-100"
                   >
                     <Image
                       src={src}

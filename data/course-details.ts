@@ -45,12 +45,12 @@ const digitalAssetCourse: CourseDetail = {
   totalLessons: 112,
   totalHours: 24,
   moreVideos: 99,
-  previewImage: "/images/courses/digital-asset-preview.jpg",
+  previewImage: "/images/creators/author-preview.jpg",
   sneakPeaks: [
-    "/images/courses/sneak-1.jpg",
-    "/images/courses/sneak-2.jpg",
-    "/images/courses/sneak-3.jpg",
-    "/images/courses/sneak-4.jpg",
+    "/images/courses/sneak-1.png",
+    "/images/courses/sneak-2.png",
+    "/images/courses/sneak-3.png",
+    "/images/courses/sneak-4.png",
   ],
   description: [
     'Embark on an enlightening exploration into the world of digital creation with our comprehensive course, "Build Digital Assets: A Comprehensive Guide." This transformative learning experience invites you to delve deep into the intricacies of crafting impactful digital content. From laying the groundwork with foundational concepts to mastering advanced techniques, this guide is meticulously curated to empower you with the skills essential for navigating the dynamic landscape of digital asset creation.',
