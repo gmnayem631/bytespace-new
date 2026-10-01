@@ -1,7 +1,12 @@
+import { CoursesHero } from "@/components/CoursesHero/CoursesHero";
 import React from "react";
 
 const page = () => {
-  return <div>Course Page</div>;
+  return (
+    <div>
+      <CoursesHero />
+    </div>
+  );
 };
 
 export default page;

@@ -15,8 +15,6 @@ export default function CreatorHero() {
         }}
       />
 
-      {/* ================= DECORATIONS ================= */}
-
       {/* Top-left lime squiggle */}
       <Image
         src="/images/creator-hero/creator-squiggle-lime.png"
@@ -25,12 +23,12 @@ export default function CreatorHero() {
         height={199}
         className="
           absolute
-          -left-[70px] -top-[35px]
-          w-[135px]
-          sm:-left-[60px] sm:-top-[35px]
-          sm:w-[145px]
-          lg:-left-[65px] lg:-top-[40px]
-          lg:w-[155px]
+          -left-17.5 -top-8.75
+          w-34
+          sm:-left-15 sm:-top-8.75
+          sm:w-36
+          lg:-left-16 lg:-top-10
+          lg:w-39
         "
       />
 
@@ -42,11 +40,11 @@ export default function CreatorHero() {
         height={199}
         className="
           absolute
-          left-[95px] top-[17px]
-          w-[48px]
+          left-24 top-4
+          w-12
           brightness-0 invert
-          sm:left-[105px] sm:top-[18px]
-          sm:w-[52px]
+          sm:left-26 sm:top-4.5
+          sm:w-13
         "
       />
 
@@ -58,10 +56,10 @@ export default function CreatorHero() {
         height={189}
         className="
           absolute
-          right-[90px] top-[10px]
-          w-[60px]
-          sm:right-[110px]
-          sm:w-[68px]
+          right-22.5 top-2.5
+          w-15
+          sm:right-27.5
+          sm:w-17
         "
       />
 
@@ -73,10 +71,10 @@ export default function CreatorHero() {
         height={372}
         className="
           absolute
-          -right-[25px] -top-[8px]
-          w-[105px]
-          sm:-right-[30px]
-          sm:w-[115px]
+          -right-6 -top-2
+          w-26
+          sm:-right-7.5
+          sm:w-29
         "
       />
 
@@ -88,11 +86,11 @@ export default function CreatorHero() {
         height={189}
         className="
           absolute
-          -left-[20px] top-[100px]
-          w-[75px]
-          sm:-left-[15px]
-          sm:top-[105px]
-          sm:w-[82px]
+          -left-5 top-25
+          w-19
+          sm:-left-4
+          sm:top-26
+          sm:w-20.5
         "
       />
 
@@ -104,11 +102,11 @@ export default function CreatorHero() {
         height={190}
         className="
           absolute
-          -left-[15px] bottom-[-72px]
-          w-[120px]
-          sm:-left-[5px]
-          sm:bottom-[-78px]
-          sm:w-[135px]
+          -left-4 -bottom-18
+          w-30
+          sm:-left-1
+          sm:-bottom-19.5
+          sm:w-34
         "
       />
 
@@ -120,15 +118,13 @@ export default function CreatorHero() {
         height={199}
         className="
           absolute
-          -right-[40px] bottom-[-70px]
-          w-[125px]
+          -right-10 -bottom-17.5
+          w-31
           rotate-[5deg]
-          sm:-right-[35px]
-          sm:w-[140px]
+          sm:-right-8.75
+          sm:w-35
         "
       />
-
-      {/* ================= CONTENT ================= */}
 
       <div className="relative z-10 mx-auto flex min-h-54 max-w-3/4 flex-col items-center justify-center px-8 text-center">
         <h1 className="max-w-3/4 text-2xl md:text-4xl font-bold leading-[1.15] tracking-[-0.4px] text-[#F5F5F6] ">
