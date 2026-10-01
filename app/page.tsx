@@ -4,6 +4,7 @@ import CourseSection from "@/components/CourseSection/CourseSection";
 import { HeroSection } from "@/components/HeroSection/HeroSection";
 import LogoStrip from "@/components/LogoStrip/LogoStrip";
 import { Navbar } from "@/components/Navbar/Navbar";
+import GrowthSection from "@/components/sections/growth/GrowthSection";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <CategorySection />
       <CourseSection />
       <CourseCategories />
+      <GrowthSection />
     </div>
   );
 }
