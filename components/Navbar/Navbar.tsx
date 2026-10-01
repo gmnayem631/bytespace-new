@@ -53,10 +53,10 @@ export const Navbar: React.FC = () => {
         </ul>
 
         <div className="flex items-center gap-5 text-white/80">
-          <Link href="/sign-in" className="hover:text-white">
+          <Link href="/login" className="hover:text-white">
             Sign In
           </Link>
-          <Link href="/join" className="hover:text-white">
+          <Link href="/register" className="hover:text-white">
             Join Us
           </Link>
           <button aria-label="Cart" className="text-white hover:opacity-80">
