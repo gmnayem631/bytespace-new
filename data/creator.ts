@@ -1,5 +1,3 @@
-import type { CourseDetail } from "./course-details";
-
 export type CreatorProfile = {
   id: string;
   name: string;
@@ -37,7 +35,7 @@ export const mockCreator: CreatorProfile = {
       id: "1",
       title: "Learn Figma from Basic",
       author: "purepearl studio",
-      image: "/images/courses/sneak-1.png",
+      image: "/images/courses/figma.png",
       rating: 4.5,
       level: "Beginner",
       students: 199,
